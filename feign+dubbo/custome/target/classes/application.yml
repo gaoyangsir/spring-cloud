@@ -1,0 +1,16 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: fdCustomer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+logging:
+  level:
+    cloud.exerices.fd.customer: debug
+dubbo:
+  protocol:
+    port: -1
+    name: dubbo
