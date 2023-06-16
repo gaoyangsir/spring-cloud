@@ -6,13 +6,25 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 127.0.0.1:8080
-        port: 8719
-#        port: 8719   sentinel默认启动一个端口为8719,这个端口的作用是用户在sentinel的 dashboard上操作时通过此端口传递到项目中
+        dashboard: 127.0.0.1:8082
+        #        port: 8719   sentinel默认启动一个端口为8719,这个端口的作用是用户在sentinel的 dashboard上操作时通过此端口传递到项目中
+        port: 8728
+      #去除链路资源路口统一未context的标识,流控中的链路模式才会生效
+      web‐context‐unify: false
 
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 #Actuator 配置
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  cloud:
+    subscribed-services: customer
+

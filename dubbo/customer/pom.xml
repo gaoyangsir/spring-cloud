@@ -13,14 +13,22 @@
     <name>dubbo-customer</name>
     <description>dubbo-customer</description>
     <dependencies>
+        <!--指定当前项目为一个web项目-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--引入sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <!--引入nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!--引入dubbo-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-dubbo</artifactId>
